@@ -80,10 +80,17 @@ blockquote {
 
 
 @media all and (max-width: 576px) {
+    .header{
+        grid-column: 1 / -1;
+    }
     .content {
         grid-column: 1 / -1;
         width: 100%;
         padding-top: 32px;
         padding-bottom: 32px;
     }    
+    
+    .footer {
+        grid-column: 1 / -1;
+    }
 }
