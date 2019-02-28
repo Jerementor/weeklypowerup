@@ -1,0 +1,46 @@
+body {
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+p {
+    margin-bottom: 32px;
+}
+
+.nav{
+    display: inline-block;
+}
+
+.nav-text{
+    font-size: 16px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto 40px;
+    grid-gap: 0px;
+}
+
+.header{
+    grid-column: 3 / 11;
+    background: white;
+    color: black;
+    margin-bottom: 32px;
+}
+
+.content {
+    grid-column: 3 / 8;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.footer{
+    grid-column: 3 / 11;
+    /*background: red;*/
+    color: black;
+}
