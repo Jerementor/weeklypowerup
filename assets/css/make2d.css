@@ -11,12 +11,45 @@ p {
     margin-bottom: 32px;
 }
 
+blockquote {
+    color: #8C8686;
+}
+
 .nav{
     display: inline-block;
+    /*border: 1px solid red;*/
+    width: 100%;
+    margin-top: 8px;
 }
 
 .nav-text{
     font-size: 16px;
+    display: inline-block;
+
+}
+
+.nav-menu{
+    display: block;
+    float: right;
+    /*border: 1px solid red;*/
+    margin-left: 32px;
+    padding-top: 8px;
+    margin-top: 6px;
+    padding-bottom: 8px;
+}
+
+.nav-link{
+    color: #8C8686;
+    margin-right: 24px;
+    text-decoration: none;
+    font-size: 16px;
+    -webkit-transition: color .3s; /* For Safari 3.0 to 6.0 */
+    transition: color .3s ease-in;
+
+}
+
+.nav-link:hover{
+    color: #050505;
 }
 
 .container{
