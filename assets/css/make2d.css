@@ -77,3 +77,13 @@ blockquote {
     /*background: red;*/
     color: black;
 }
+
+
+@media all and (max-width: 576px) {
+    .content {
+        grid-column: 1 / -1;
+        width: 100%;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }    
+}
