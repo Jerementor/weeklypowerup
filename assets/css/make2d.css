@@ -110,7 +110,6 @@ blockquote {
     }
     .content {
         grid-column: 1 / -1;
-        width: 100%;
         padding-top: 32px;
         padding-bottom: 32px;
   
@@ -118,45 +117,74 @@ blockquote {
     
     .footer {
         grid-column: 1 / -1;
-         
     }
     
     .nav{
-
         margin-top: 0px;
     }
     
     .nav-menu{
-        float: left;
+        float: right;
         padding: 0px;
         margin: 0px;
     }
 }
+
+@media all and (min-width: 577px) {
+    .header{
+        grid-column: 1 / -1;
+    }
+    .content {
+        grid-column: 1 / -1;
+        padding-top: 32px;
+        padding-bottom: 32px;
+  
+    }    
+    
+    .footer {
+        grid-column: 1 / -1;
+    }
+    
+    .nav-menu{
+        float: right;
+        padding: 0px;
+        margin: 0px;
+        
+    }
+}
+
+
 
 
 /*// Medium devices (tablets, 768px and up)*/
 @media all and (min-width: 766px) {
     
     .header{
-        grid-column: 1 / -1;
+        grid-column: 3 / -1;
     }
     .content {
-        grid-column: 3 / 9;
+        grid-column: 3 / 10;
         width: 100%;
         padding-top: 32px;
         padding-bottom: 32px;
     }    
     
     .footer {
-        grid-column: 1 / -1;
+        grid-column: 3 / -1;
     }    
+    
+    .nav-menu{
+        float: right;
+        padding: 0px;
+        margin: 0px;
+    }
 
 }
 
 /*// Large devices (desktops, 992px and up)*/
-@media all and (min-width: 776px) { 
+@media all and (min-width: 767px) { 
 .header{
-    grid-column: 2 / -1;
+    grid-column: 3 / 10;
     background: white;
     color: black;
     margin-bottom: 32px;
@@ -187,9 +215,34 @@ blockquote {
 }
 
 .content {
+    grid-column: 3 / 8;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+}
+
+.footer{
+    grid-column: 3 / 10;
+    /*background: red;*/
+    color: black;
+}    
+    
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media all and (min-width: 1500px) { 
+.header{
+    grid-column: 3 / 10;
+    background: white;
+    color: black;
+    margin-bottom: 32px;
+}
+
+.content {
     grid-column: 3 / 7;
     padding-top: 32px;
     padding-bottom: 32px;
+
 }
 
 .footer{
