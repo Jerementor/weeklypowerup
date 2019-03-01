@@ -14,6 +14,8 @@ function make2dgames_enqueue_styles()
 {
     wp_enqueue_script('add_prism_js', get_template_directory_uri() . '/assets/js/prism.js');
     wp_enqueue_style("add_google_font",  'https://fonts.googleapis.com/css?family=Nunito', false);
+    wp_enqueue_style("add_google_font_halant",  'https://fonts.googleapis.com/css?family=Halant:300,400,500,600,700', false);
+    wp_enqueue_style("add_google_font_ropa",  'https://fonts.googleapis.com/css?family=Ropa+Sans', false);
     wp_enqueue_style("add_prism_css",  get_template_directory_uri() . "/assets/css/prism.css");
     wp_enqueue_style("make2d-custom",  get_template_directory_uri() . "/assets/css/make2d.css");
     wp_enqueue_style("make2dgames-style", get_stylesheet_uri());

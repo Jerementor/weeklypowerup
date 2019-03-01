@@ -13,6 +13,7 @@ get_header();
 ?>
 
 <!--Index.php-->
+
 <div class="content">
 		<?php
 			if ( have_posts() ) {
@@ -20,7 +21,7 @@ get_header();
 				// Load posts loop.
 				while ( have_posts() ) {
 					
-					the_title('<h1>', '</h1>');
+					the_title('<h1 class="post-title">', '</h1>');
 					
 					the_post();
 					
