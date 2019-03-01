@@ -8,7 +8,7 @@ get_header();
 ?>
 <!-- Page.php -->
 
-
+<div class="content">
 <h1><?php wp_title(''); ?></h1>
 
 <?php if ( have_posts() ) : ?>
@@ -32,6 +32,6 @@ get_header();
 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 <?php endif; ?>	    
     
-    
+</div>
 
 <?php get_footer(); ?>

@@ -6,6 +6,30 @@ body {
     padding-right: 32px;
 }
 
+::-moz-selection {
+    color: white;
+    background: black;  
+}
+::selection { 
+    color: #fafafa;
+    background: #050505;
+}
+
+
+
+body::-webkit-scrollbar {
+    width: 2em;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #3d3d3d;
+  outline: 1px solid #fafafa;
+}
+
 h1 {
     font-size: 36px;
     line-height: 48px;
@@ -74,7 +98,7 @@ blockquote {
 .container{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px auto 40px;
+    grid-template-rows: 64px auto 64px;
     grid-gap: 0px;
 }
 
@@ -117,7 +141,7 @@ blockquote {
         grid-column: 1 / -1;
     }
     .content {
-        grid-column: 2 / 10;
+        grid-column: 3 / 9;
         width: 100%;
         padding-top: 32px;
         padding-bottom: 32px;
@@ -132,20 +156,21 @@ blockquote {
 /*// Large devices (desktops, 992px and up)*/
 @media all and (min-width: 776px) { 
 .header{
-    grid-column: 3 / 11;
+    grid-column: 2 / -1;
     background: white;
     color: black;
     margin-bottom: 32px;
 }
 
 .content {
-    grid-column: 3 / 8;
+    grid-column: 3 / 10;
+    width: 100%;
     padding-top: 32px;
     padding-bottom: 32px;
 }
 
 .footer{
-    grid-column: 3 / 11;
+    grid-column: 3 / 10;
     /*background: red;*/
     color: black;
 }    
@@ -155,20 +180,20 @@ blockquote {
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media all and (min-width: 1200px) { 
 .header{
-    grid-column: 3 / 11;
+    grid-column: 3 / 10;
     background: white;
     color: black;
     margin-bottom: 32px;
 }
 
 .content {
-    grid-column: 3 / 8;
+    grid-column: 3 / 7;
     padding-top: 32px;
     padding-bottom: 32px;
 }
 
 .footer{
-    grid-column: 3 / 11;
+    grid-column: 3 / 10;
     /*background: red;*/
     color: black;
 }    
