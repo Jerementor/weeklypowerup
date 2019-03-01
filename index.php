@@ -12,6 +12,7 @@
 get_header();
 ?>
 
+<!--Index.php-->
 <div class="content">
 		<?php
 			if ( have_posts() ) {

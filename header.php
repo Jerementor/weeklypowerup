@@ -15,20 +15,20 @@
 <?php wp_head(); ?>
     
 </head>
-
+<body>
 <div class="container">
 <div class="header">
     <div class="nav">
         <h3 class="nav-text">make2d.games</h3>
-        <!--<div class="nav-menu">-->
-        <!--    <a href="/" class="nav-link">Blog</a>-->
-        <!--    <a href="/" class="nav-link">About</a>-->
-        <!--    <a href="/" class="nav-link">Contact</a>-->
-        <!--</div>-->
+        <div class="nav-menu">
+            <a href="/" class="nav-link">Blog</a>
+            <a href="/" class="nav-link">About</a>
+            <a href="/" class="nav-link">Contact</a>
+        </div>
         <!--Will add proper functionality next-->
     </div>
 </div>
-<body>
+
 
 
 

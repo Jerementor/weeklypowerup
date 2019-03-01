@@ -1,10 +1,29 @@
 body {
     font-family: 'Nunito', sans-serif !important;
     font-size: 18px;
+    line-height: 27px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+h2 {
+    font-size: 29px;
+    line-height: 39px;    
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 33px;    
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 28px;    
 }
 
 p {
@@ -13,6 +32,7 @@ p {
 
 blockquote {
     color: #8C8686;
+    margin-bottom: 64px;
 }
 
 .nav{
@@ -25,7 +45,6 @@ blockquote {
 .nav-text{
     font-size: 16px;
     display: inline-block;
-
 }
 
 .nav-menu{
@@ -59,6 +78,59 @@ blockquote {
     grid-gap: 0px;
 }
 
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media all and (max-width: 576px) {
+    .header{
+        grid-column: 1 / -1;
+    }
+    .content {
+        grid-column: 1 / -1;
+        width: 100%;
+        padding-top: 32px;
+        padding-bottom: 32px;
+  
+    }    
+    
+    .footer {
+        grid-column: 1 / -1;
+         
+    }
+    
+    .nav{
+
+        margin-top: 0px;
+    }
+    
+    .nav-menu{
+        float: left;
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+
+/*// Medium devices (tablets, 768px and up)*/
+@media all and (min-width: 766px) {
+    
+    .header{
+        grid-column: 1 / -1;
+    }
+    .content {
+        grid-column: 2 / 10;
+        width: 100%;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }    
+    
+    .footer {
+        grid-column: 1 / -1;
+    }    
+
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media all and (min-width: 776px) { 
 .header{
     grid-column: 3 / 11;
     background: white;
@@ -76,21 +148,29 @@ blockquote {
     grid-column: 3 / 11;
     /*background: red;*/
     color: black;
+}    
+    
 }
 
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media all and (min-width: 1200px) { 
+.header{
+    grid-column: 3 / 11;
+    background: white;
+    color: black;
+    margin-bottom: 32px;
+}
 
-@media all and (max-width: 576px) {
-    .header{
-        grid-column: 1 / -1;
-    }
-    .content {
-        grid-column: 1 / -1;
-        width: 100%;
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }    
+.content {
+    grid-column: 3 / 8;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.footer{
+    grid-column: 3 / 11;
+    /*background: red;*/
+    color: black;
+}    
     
-    .footer {
-        grid-column: 1 / -1;
-    }
 }
