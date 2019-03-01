@@ -18,6 +18,7 @@ body {
 
 body::-webkit-scrollbar {
     width: 2em;
+    background-color: #49234E;
 }
  
 body::-webkit-scrollbar-track {
@@ -25,7 +26,8 @@ body::-webkit-scrollbar-track {
 }
  
 body::-webkit-scrollbar-thumb {
-  background-color: #3d3d3d;
+  /*background-color: #67597E;*/
+  background-color: #67597E;
   outline: 1px solid #fafafa;
 }
 
@@ -54,10 +56,6 @@ p {
     margin-bottom: 32px;
 }
 
-/*blockquote {*/
-/*    color: #8C8686;*/
-/*    margin-bottom: 64px;*/
-/*}*/
 
 blockquote {
   background: #f9f9f9;
@@ -85,6 +83,8 @@ blockquote p {
 }
 
 
+
+
 .nav{
     display: inline-block;
     /*border: 1px solid red;*/
@@ -95,6 +95,18 @@ blockquote p {
 .nav-text{
     font-size: 16px;
     display: inline-block;
+}
+
+.nav-title{
+    font-size: 16px;
+    display: inline-block;
+    color: #67597E;
+    -webkit-transition: color .3s;
+    transition: color .4s ease-in;
+}
+
+.nav-title:hover{
+    color: #49234E;
 }
 
 .nav-menu{
@@ -108,7 +120,7 @@ blockquote p {
 }
 
 .nav-link{
-    color: #8C8686;
+    color: #847997;
     margin-right: 24px;
     text-decoration: none;
     font-size: 16px;
@@ -118,7 +130,7 @@ blockquote p {
 }
 
 .nav-link:hover{
-    color: #050505;
+    color: #49234E;
 }
 
 .container{

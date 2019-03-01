@@ -22,3 +22,55 @@ function make2dgames_enqueue_styles()
     
 }
 add_action("wp_enqueue_scripts", "make2dgames_enqueue_styles");
+
+
+function make2dgames_setup(){
+	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
+	add_theme_support( 'title-tag' );
+    
+    /*
+	 * Enable support for Post Thumbnails on posts and pages.
+	 *
+	 * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 */
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 825, 510, true );
+    /*
+    * Make theme available for translation.
+    * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/twentyfifteen
+    * If you're building a theme based on uncomplicated, use a find and replace
+    * to change 'uncomplicated' to the name of your theme in all the template files
+    */
+    load_theme_textdomain( 'make2dgames' );
+    // Add default posts and comments RSS feed links to head.
+    add_theme_support( 'automatic-feed-links' );    
+    
+    
+    // This theme uses wp_nav_menu() in two locations.
+    register_nav_menus( array(
+    'logged-in'     => __("Logged-In Menu", "make2dgames-login"),
+    'logged-out'    => __("Logged-Out Menu", "make2dgames-logout"),
+        
+    ));
+    
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link',
+		'gallery',
+		'audio',
+	
+	) );
+	
+	// Indicate widget sidebars can use selective refresh in the Customizer.
+	add_theme_support( 'customize-selective-refresh-widgets' );
+	
+}
+add_action( 'after_setup_theme', 'make2dgames_setup' );
