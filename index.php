@@ -15,6 +15,8 @@ get_header();
 <!--Index.php-->
 
 <div class="content">
+	<a href = "/" class="tag">Game Maker Studio 2</a>
+	<a href = "/"class="tag">Tutorial</a>
 		<?php
 			if ( have_posts() ) {
 

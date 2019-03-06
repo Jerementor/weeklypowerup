@@ -12,13 +12,13 @@ body {
 }
 ::selection { 
     color: #fafafa;
-    background: #050505;
+    background: #39A0ED;
 }
 
 
 body::-webkit-scrollbar {
     width: 2em;
-    background-color: #49234E;
+    background-color: #ffff;
 }
  
 body::-webkit-scrollbar-track {
@@ -26,8 +26,7 @@ body::-webkit-scrollbar-track {
 }
  
 body::-webkit-scrollbar-thumb {
-  /*background-color: #67597E;*/
-  background-color: #67597E;
+  background-color: #4C6085;
   outline: 1px solid #fafafa;
 }
 
@@ -56,6 +55,19 @@ p {
     margin-bottom: 32px;
 }
 
+a {
+  color: #39A0ED;
+  -webkit-transition:color .3s; /* For Safari 3.0 to 6.0 */
+  transition: color .3s ease-in;     
+}
+
+a:visited{
+ color: #4C6085;
+}
+
+a:hover{
+    color: #4C6085;    
+}
 
 blockquote {
   background: #f9f9f9;
@@ -76,14 +88,32 @@ blockquote p {
   display: inline;
 }
 
+.tag{
+    border-radius: 32px;
+    background-color: #E8E8E8;
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: #050505;
+    font-size: 16px;
+    margin-right: 12px;
+    text-decoration: none;
+    -webkit-transition: background-color .3s; /* For Safari 3.0 to 6.0 */
+    transition: background-color .3s ease-in;    
+    -webkit-transition:color .3s; /* For Safari 3.0 to 6.0 */
+    transition: color .3s ease-in;    
+}
+
+.tag:hover{
+    background-color: #e8e8e8;
+    color: #39A0ED;
+}
+
 .post-title{
 
     font-weight: 400;
     font-family: 'Ropa Sans', sans-serif;    
 }
-
-
-
 
 .nav{
     display: inline-block;
@@ -100,13 +130,13 @@ blockquote p {
 .nav-title{
     font-size: 16px;
     display: inline-block;
-    color: #67597E;
+    color: #39A0ED;
     -webkit-transition: color .3s;
     transition: color .4s ease-in;
 }
 
 .nav-title:hover{
-    color: #49234E;
+    color: #4C6085;
 }
 
 .nav-menu{
@@ -114,7 +144,7 @@ blockquote p {
     float: right;
     /*border: 1px solid red;*/
     margin-left: 32px;
-    padding-top: 8px;
+    padding-top: 16px;
     margin-top: 6px;
     padding-bottom: 8px;
 }
@@ -214,7 +244,7 @@ blockquote p {
     .nav-menu{
         float: right;
         padding: 0px;
-        margin: 0px;
+        margin: 16px;
     }
 
 }
