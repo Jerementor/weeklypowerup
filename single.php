@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The single post template file
  *
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
@@ -12,7 +12,7 @@
 get_header();
 ?>
 
-<!--Index.php-->
+<!--Single.php-->
 <div class="content">
 		<?php
 			if ( have_posts() ) {
@@ -21,7 +21,6 @@ get_header();
 				while ( have_posts() ) {
 					
 					the_title('<h1 class="post-title">', '</h1>');
-					
 					
 					$categories = get_the_category();
 

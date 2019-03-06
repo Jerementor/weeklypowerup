@@ -74,3 +74,12 @@ function make2dgames_setup(){
 	
 }
 add_action( 'after_setup_theme', 'make2dgames_setup' );
+
+/**
+ * Hide Admin Bar From Everyone But Admins
+ *
+ *
+ */
+if (!current_user_can('manage_options')){
+    add_filter('show_admin_bar', '__return_false');
+}
