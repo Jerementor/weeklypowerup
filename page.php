@@ -1,37 +1,41 @@
-<?php 
+<?php
 /**
- * The template for displaying all pages
+ * The main template file
  *
- * @since 1.0
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Make2d
+ * @since 1.0.0
  */
-get_header(); 
+
+get_header();
 ?>
-<!-- Page.php -->
 
+<!--Page.php-->
 <div class="content">
-<h1><?php wp_title(''); ?></h1>
+		<?php
+			if ( have_posts() ) {
+	
+				// Load posts loop.
+				while ( have_posts() ) {
+					
+					$categories = get_the_category();
 
-<?php if ( have_posts() ) : ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-            <?php $author = get_the_author(); ?> 
-            <?php $thumbnail_id = get_the_author_meta('ID'); ?>
-            <div class="card">
-            <?php the_title( '<h2 class="article-header">', '</h2>'); ?>
-            <?php the_excerpt(); ?>
-            <?php echo get_avatar($thumbnail_id, 48, $default, $alt, array( 'class' => array( 'post-avatar') )); ?>
-            <div><strong class="bold-text"><?php echo $author ?></strong></div>
-            <div class="post-date"><?php the_time('F jS'); ?> </div>
-            <a href="<?php the_permalink(); ?>" class="btn-dark float-right w-button">Read Post</a>
-            
-        <?php endwhile; ?>
-
-<div class="nav-previous"><?php next_posts_link( 'Older posts' ); ?></div>
-<div class="nav-next"><?php previous_posts_link( 'Newer posts' ); ?></div>
-
-<?php else : ?>
-<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-<?php endif; ?>	    
-    
+					foreach ($categories as $category){
+						echo '<a class="tag" href="' . get_category_link($category->term_id) . '">' . $category->cat_name . '</a>';
+					}
+					
+					the_post();
+					
+					the_content();
+					
+				}
+			} 
+		?>
 </div>
 
-<?php get_footer(); ?>
+<?php
+get_footer();
+
+

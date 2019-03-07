@@ -10,7 +10,7 @@ get_header();
 
 <!-- Category.php -->
 <div class="content">
-<h4>All posts in the category for: <strong class="tag"> <?php single_cat_title(); ?></strong></h4>
+<h4>All posts in the category for: <a href="" class="tag"><strong> <?php single_cat_title(); ?></strong></a></h4>
 <?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 		 <?php $author = get_the_author(); ?> 
