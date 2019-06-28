@@ -1,0 +1,17 @@
+.fp-div{
+    height: 100vh;
+}
+
+.fp-right{
+    float: right;
+}
+
+.fp-left{
+    float: left;
+}
+
+.fp-title{
+	font-size: 54px;
+	font-weight: 200;
+	line-height: 1.5em;
+}

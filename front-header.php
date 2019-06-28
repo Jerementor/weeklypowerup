@@ -5,9 +5,6 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">      
     <title><?php wp_title(''); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
-
-<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,400,700&display=swap" rel="stylesheet">
-
     <link rel="pingback" 
     href="<?php bloginfo( 'pingback_url' ); ?>" />
     <?php if ( is_singular() 
@@ -19,14 +16,6 @@
     
 </head>
 <body>
-
-<div class="top-bar">
-	Join below for new content each week!
-</div>
-
-<div class="container">
-
-<?php get_template_part('template-parts/nav/logged_out_nav'); ?>
 
 
 

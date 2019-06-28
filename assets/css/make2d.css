@@ -1,9 +1,15 @@
+* {
+
+    font-family: 'Nunito Sans', sans-serif;
+}
+
 body {
-    font-family: 'Nunito', sans-serif !important;
+    /*font-family: 'Nunito', sans-serif !important;*/
     font-size: 18px;
     line-height: 27px;
-    padding-left: 32px;
-    padding-right: 32px;
+   /* padding-left: 32px;
+    padding-right: 32px;*/
+    margin: 0px auto;
 }
 
 ::-moz-selection {
@@ -88,6 +94,22 @@ blockquote p {
   display: inline;
 }
 
+.bubble{
+    border-radius: 32px;
+
+    padding: 3px;
+
+
+    color: #050505;
+    font-size: 16px;
+    text-decoration: underline;
+    -webkit-transition: background-color .3s; /* For Safari 3.0 to 6.0 */
+    transition: background-color .3s ease-in;    
+    -webkit-transition:color .3s; /* For Safari 3.0 to 6.0 */
+    transition: color .3s ease-in;    
+}
+
+
 .tag{
     border-radius: 32px;
     background-color: #E8E8E8;
@@ -110,9 +132,21 @@ blockquote p {
 }
 
 .post-title{
-
     font-weight: 400;
     font-family: 'Ropa Sans', sans-serif;    
+}
+
+.sub-header{
+   font-weight: 400;
+    font-family: 'Ropa Sans', sans-serif;   
+}
+
+.text-center{
+    text-align: center;
+}
+
+.padding-50{
+    padding-top: 250px;
 }
 
 .nav{
@@ -130,14 +164,13 @@ blockquote p {
 .nav-title{
     font-size: 16px;
     display: inline-block;
-    color: #39A0ED;
-    -webkit-transition: color .3s;
+    color: #000;
     transition: color .4s ease-in;
+    margin-top: 30px;
+    border-bottom: 5px solid #FCC400;
 }
 
-.nav-title:hover{
-    color: #4C6085;
-}
+
 
 .nav-menu{
     display: block;
@@ -168,7 +201,41 @@ blockquote p {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 64px auto 64px;
     grid-gap: 0px;
+    height: 100vh;
 }
+
+.content-left{
+ position: relative; left: 6px; top: 168px;    
+  grid-column: 3 / 7;
+}
+
+.content-right{
+    position: relative; left: 234px; top: 161px;
+    grid-column: 6 / 9;
+    padding-top: 32px;
+    padding-bottom: 32px;  
+}
+
+.top-bar{
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    background-color: #0D54A4;
+    color: #fff;
+    line-height: 2em;
+    padding: 5px;
+}
+
+.top-bar > p {
+/*margin-top: 10px;*/
+}
+
+
+/*.content-center{*/
+/*  display: grid;*/
+/*  grid-template-columns: 5fr 3fr 2fr 700px 2fr 3fr 5fr;*/
+ /* width: 1300px; /* Width is optional */
+/*}*/
 
 
 /*// Small devices (landscape phones, 576px and up)*/
@@ -288,6 +355,8 @@ blockquote p {
     padding-bottom: 32px;
 
 }
+
+
 
 .footer{
     grid-column: 3 / 10;

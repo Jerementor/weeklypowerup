@@ -16,7 +16,7 @@ get_header();
 
         <div class="article-card">
           <div class="article-card-header">
-              <a href="<?php the_permalink(); ?>"<?php the_title( '<h2 class="article-header">', '</h2>'); ?></a>
+              <a href="<?php the_permalink(); ?>"<?php the_title( '<h2 class="post-title">', '</h2>'); ?></a>
           </div>
           
           <div class="article-card-excerpt">
