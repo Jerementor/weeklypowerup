@@ -20,9 +20,9 @@
 </head>
 <body>
 
-<div class="top-bar">
-	Join below for new content each week!
-</div>
+<!-- <div class="top-bar">
+	<p>Get Weekly Updates</p><button>Sign Up!</button>
+</div> -->
 
 <div class="container">
 

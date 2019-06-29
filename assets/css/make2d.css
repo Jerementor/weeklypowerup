@@ -21,6 +21,8 @@ body {
     background: #0D54A4;
 }
 
+
+
 /*
 body::-webkit-scrollbar {
     width: 2em;
@@ -170,7 +172,9 @@ blockquote p {
     border-bottom: 5px solid #FCC400;
 }
 
-
+nav#menu-main {
+    padding-top: 18px;
+}
 
 .nav-menu{
     display: block;
