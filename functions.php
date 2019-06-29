@@ -13,15 +13,16 @@
 function make2dgames_enqueue_styles()
 {
     wp_enqueue_script('add_prism_js', get_template_directory_uri() . '/assets/js/prism.js');
+
     wp_enqueue_style("add_google_font",  'https://fonts.googleapis.com/css?family=Nunito', false);
-    wp_enqueue_style("add_google_font_halant",  'https://fonts.googleapis.com/css?family=Halant:300,400,500,600,700', false);
-    wp_enqueue_style("add_google_font_ropa",  'https://fonts.googleapis.com/css?family=Ropa+Sans', false);
+    // wp_enqueue_style("add_google_font_halant",  'https://fonts.googleapis.com/css?family=Halant:300,400,500,600,700', false);
+    // wp_enqueue_style("add_google_font_ropa",  'https://fonts.googleapis.com/css?family=Ropa+Sans', false);
     wp_enqueue_style("add_prism_css",  get_template_directory_uri() . "/assets/css/prism.css");
     wp_enqueue_style("make2d-custom",  get_template_directory_uri() . "/assets/css/make2d.css");
     wp_enqueue_style("frontpage-custom",  get_template_directory_uri() . "/assets/css/frontpage.css");
     wp_enqueue_style("make2dgames-style", get_stylesheet_uri());
     
-    wp_enqueue_style("add_main_css",  get_template_directory_uri() . "/assets/css/main.css");
+    // wp_enqueue_style("add_main_css",  get_template_directory_uri() . "/assets/css/main.css");
    
     
 }
@@ -50,15 +51,15 @@ function make2dgames_setup(){
     * If you're building a theme based on uncomplicated, use a find and replace
     * to change 'uncomplicated' to the name of your theme in all the template files
     */
-    load_theme_textdomain( 'make2dgames' );
+    load_theme_textdomain( 'weeklypowerup' );
     // Add default posts and comments RSS feed links to head.
     add_theme_support( 'automatic-feed-links' );    
     
     
     // This theme uses wp_nav_menu() in two locations.
     register_nav_menus( array(
-    'logged-in'     => __("Logged-In Menu", "make2dgames-login"),
-    'logged-out'    => __("Logged-Out Menu", "make2dgames-logout"),
+    'logged-in'     => __("Logged-In Menu", "weeklypowerup-login"),
+    'logged-out'    => __("Logged-Out Menu", "weeklypowerup-logout"),
         
     ));
     
