@@ -15,9 +15,9 @@ get_header();
 
 <div class="content">
     <h1 class="fp-title">Join a growing community of game developers learning to make games each week</h1>
-<script async data-uid="ee1dce0409" src="https://f.convertkit.com/ee1dce0409/243078d560.js"></script>
 
 
+	<script async data-uid="ee1dce0409" src="https://f.convertkit.com/ee1dce0409/243078d560.js"></script>
 </div>   
 
 

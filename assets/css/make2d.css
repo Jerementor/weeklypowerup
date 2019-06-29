@@ -14,14 +14,14 @@ body {
 
 ::-moz-selection {
     color: white;
-    background: black;  
+    background: #0D54A4;  
 }
 ::selection { 
-    color: #fafafa;
-    background: #39A0ED;
+    color: white;
+    background: #0D54A4;
 }
 
-
+/*
 body::-webkit-scrollbar {
     width: 2em;
     background-color: #ffff;
@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #4C6085;
   outline: 1px solid #fafafa;
 }
-
+*/
 
 h1 {
     font-size: 36px;
@@ -245,9 +245,9 @@ blockquote p {
     }
     .content {
         grid-column: 1 / -1;
-        padding-top: 32px;
-        padding-bottom: 32px;
-  
+        /*padding-top: 32px;
+        padding-bottom: 32px;*/
+        padding: 32px;
     }    
     
     .footer {
@@ -256,6 +256,14 @@ blockquote p {
     
     .nav{
         margin-top: 0px;
+        padding: 32px;
+
+    }
+
+    a.nav-link{
+        display: block;
+        margin-top: 6px;
+        padding-right: 32px;
     }
     
     .nav-menu{
