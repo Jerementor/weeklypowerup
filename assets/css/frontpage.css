@@ -1,17 +1,37 @@
-.fp-div{
-    height: 100vh;
+.frontpage-wrapper{
+	display: grid;
+	grid-template-columns: 
+			minmax(1.2rem, 1fr)
+			minmax(auto, 57ch)
+			minmax(1.2rem, 1fr);
 }
 
-.fp-right{
-    float: right;
+.frontpage-title{
+	grid-column: 2;
+	font-size: 50px;
+	line-height: 1em;
 }
 
-.fp-left{
-    float: left;
+.frontpage-latest{
+	color: white;
+	font-size: 2em;
 }
 
-.fp-title{
-	font-size: 54px;
-	font-weight: 200;
-	line-height: 1.5em;
+.frontpage-latest{
+	display: inline-block;
+}
+
+.frontpage-title-wrapper	{
+	display: block;
+	text-align: center;
+	padding: 20px;
+	background: #0D54A4;
+	margin-bottom: 40px;
+	color: white;
+}
+
+
+form {
+	grid-column: 2;
+	margin-bottom: 40px;
 }

@@ -1,0 +1,112 @@
+body{
+
+	  font-family: 'Nunito Sans', sans-serif;
+
+	}
+	.content{
+		display: grid;
+		grid-template-columns: 
+			minmax(1.2rem, 1fr)
+			minmax(auto, 57ch)
+			minmax(1.2rem, 1fr);
+	}
+
+	p, blockquote, pre, a{
+		grid-column: 2;
+		font-size: 1.1rem;
+		line-height: 1.5em;
+	}
+
+	blockquote {
+	  background: #f9f9f9;
+	  border-left: 10px solid #ccc;
+	  margin: 1.5em 10px;
+	  padding: 0.5em 10px;
+	  quotes: "\201C""\201D""\2018""\2019";
+	}
+
+	img {
+		grid-column: 1/4;
+		width: 100%;
+		max-width: 100ch;
+		justify-self: center;
+	}
+
+	.category-content{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 40px;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	.post-avatar {
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+	}
+
+	a{
+		color: #00000;
+	}
+
+	.brand{
+		float: left;
+		color: #1f1f1f;
+		text-decoration: none;
+		font-weight: 700;
+		border-bottom: 3px solid #FCC400;
+		/*hacky fix*/
+		margin-top: -3px;
+	}
+
+	.nav{
+		display: block;
+		padding-bottom: 20px;
+		margin: 10px;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	.nav div ul {
+		display: block;
+		background: #3d3d3d;
+	}
+
+	.nav-link{
+		float: right;
+		padding-right: 20px;
+		color: #1F1F1F;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.title-wrapper	{
+		display: block;
+		text-align: center;
+		padding: 50px;
+		background: #0D54A4;
+		margin-bottom: 40px;
+		color: white;
+	}
+
+	.tag {
+	    border-radius: 32px;
+	    background-color: #E8E8E8;
+	    padding: 3px;
+	    padding-left: 12px;
+	    padding-right: 12px;
+	    color: #050505;
+	    font-size: 16px;
+	    margin-right: 12px;
+	    text-decoration: none;
+	    -webkit-transition: background-color .3s; /* For Safari 3.0 to 6.0 */
+	    transition: background-color .3s ease-in;    
+	    -webkit-transition:color .3s; /* For Safari 3.0 to 6.0 */
+	    transition: color .3s ease-in;    
+	}
+
+	.tag:hover{
+	    background-color: #e8e8e8;
+	    color: #1f1f1f;
+	}

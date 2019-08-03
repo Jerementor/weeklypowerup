@@ -5,37 +5,44 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Make2d
+ * @package WeeklyPowerup
  * @since 1.0.0
  */
 
 get_header();
 ?>
 
+
+
 <!--Single.php-->
-<div class="content">
-		<?php
-			if ( have_posts() ) {
-	
-				// Load posts loop.
-				while ( have_posts() ) {
-					
-					the_title('<h1 class="post-title">', '</h1>');
-					
+
+<?php if ( have_posts() ) : ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+
+       		<div class="header">
+       			<div class="title-wrapper">
+				<?php the_title('<h1 class="title">', '</h1>'); ?>
+				<?php
 					$categories = get_the_category();
 
 					foreach ($categories as $category){
 						echo '<a class="tag" href="' . get_category_link($category->term_id) . '">' . $category->cat_name . '</a>';
 					}
-					
-					the_post();
-					
+
+					?>
+       			</div>
+       		</div>
+
+       		<div class="content">
+       			<?php 
+       		
+										
 					the_content();
-					
-				}
-			} 
-		?>
-</div>
+       			?>
+       		</div>
+          
+<?php endwhile; ?>
+<?php endif; ?>
 
 <?php
 get_footer();

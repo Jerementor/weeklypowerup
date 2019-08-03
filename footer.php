@@ -5,6 +5,4 @@
 </div> 
 <!--End footer class-->
 </body>
-</div>
-<!--End container class-->
 </html>

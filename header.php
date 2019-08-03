@@ -20,12 +20,6 @@
 </head>
 <body>
 
-<!-- <div class="top-bar">
-	<p>Get Weekly Updates</p><button>Sign Up!</button>
-</div> -->
-
-<div class="container">
-
 <?php get_template_part('template-parts/nav/logged_out_nav'); ?>
 
 

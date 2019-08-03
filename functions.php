@@ -1,35 +1,56 @@
 <?php
 /**
- * Twenty Nineteen functions and definitions
+ * Weekly Powerup functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Make2d
- * @subpackage Twenty_Nineteen
+ * @package WeeklyPowerup
  * @since 1.0.0
  */
  
 //Loading in Scripts
-function make2dgames_enqueue_styles()
+function weeklypowerup_enqueue_styles()
 {
-    wp_enqueue_script('add_prism_js', get_template_directory_uri() . '/assets/js/prism.js');
 
-    wp_enqueue_style("add_google_font",  'https://fonts.googleapis.com/css?family=Nunito', false);
-    // wp_enqueue_style("add_google_font_halant",  'https://fonts.googleapis.com/css?family=Halant:300,400,500,600,700', false);
-    // wp_enqueue_style("add_google_font_ropa",  'https://fonts.googleapis.com/css?family=Ropa+Sans', false);
+	 wp_enqueue_style("add_normalize",  'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css', false);
+
+	 wp_enqueue_style("add_weekly_css",  get_template_directory_uri() . "/assets/css/weekly.css");
+
+	 wp_enqueue_style("add_google_font",  'https://fonts.googleapis.com/css?family=Nunito', false);   
+
+    wp_enqueue_script('add_prism_js', get_template_directory_uri() . '/assets/js/prism.js');
+ 
     wp_enqueue_style("add_prism_css",  get_template_directory_uri() . "/assets/css/prism.css");
-    wp_enqueue_style("make2d-custom",  get_template_directory_uri() . "/assets/css/make2d.css");
+
+
     wp_enqueue_style("frontpage-custom",  get_template_directory_uri() . "/assets/css/frontpage.css");
-    wp_enqueue_style("make2dgames-style", get_stylesheet_uri());
+
+    wp_enqueue_style("weeklypowerup-style", get_stylesheet_uri());
     
-    // wp_enqueue_style("add_main_css",  get_template_directory_uri() . "/assets/css/main.css");
-   
     
 }
-add_action("wp_enqueue_scripts", "make2dgames_enqueue_styles");
+add_action("wp_enqueue_scripts", "weeklypowerup_enqueue_styles");
+
+function chkmk_custom_override_checkout_fields( $fields ) {
+    //unset($fields['billing']['billing_first_name']);
+    //unset($fields['billing']['billing_last_name']);
+    unset($fields['billing']['billing_company']);
+    unset($fields['billing']['billing_address_1']);
+    unset($fields['billing']['billing_address_2']);
+    unset($fields['billing']['billing_city']);
+    unset($fields['billing']['billing_postcode']);
+    unset($fields['billing']['billing_country']);
+    unset($fields['billing']['billing_state']);
+    unset($fields['billing']['billing_phone']);
+    unset($fields['order']['order_comments']);
+    //unset($fields['billing']['billing_email']);
+    return $fields;
+}
+add_filter( 'woocommerce_checkout_fields' , 'chkmk_custom_override_checkout_fields' );
 
 
-function make2dgames_setup(){
+
+function weeklypowerup_setup(){
 	/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
@@ -76,38 +97,16 @@ function make2dgames_setup(){
 	
 	// Indicate widget sidebars can use selective refresh in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
-
-
-	/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function twentynineteen_widgets_init() {
-
-	register_sidebar(
-		array(
-			'name'          => __( 'Footer', 'weeklypowerup' ),
-			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your footer.', 'twentynineteen' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-
-}
 	
 }
-add_action( 'after_setup_theme', 'make2dgames_setup' );
+add_action( 'after_setup_theme', 'weeklypowerup_setup' );
 
-/**
- *
- Hide Admin Bar From Everyone But Admins
- *
- *
- */
-if (!current_user_can('manage_options')){
-    add_filter('show_admin_bar', '__return_false');
-}
+	/**
+	 *
+	 Hide Admin Bar From Everyone But Admins
+	 *
+	 *
+	 */
+	if (!current_user_can('manage_options')){
+	    add_filter('show_admin_bar', '__return_false');
+	}
