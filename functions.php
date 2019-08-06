@@ -12,20 +12,23 @@
 function weeklypowerup_enqueue_styles()
 {
 
-	 wp_enqueue_style("add_normalize",  'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css', false);
+	 wp_enqueue_style("add_normalize", 		get_template_directory_uri() 	. "/assets/css/normalize.css");
 
-	 wp_enqueue_style("add_weekly_css",  get_template_directory_uri() . "/assets/css/weekly.css");
+	 wp_enqueue_style("add_webflow_css",  	get_template_directory_uri() 	. "/assets/css/webflow.css");
 
-	 wp_enqueue_style("add_google_font",  'https://fonts.googleapis.com/css?family=Nunito', false);   
+	 wp_enqueue_style("add_weekly_css",  	get_template_directory_uri() 	. "/assets/css/weeklypowerup.webflow.css");
 
-    wp_enqueue_script('add_prism_js', get_template_directory_uri() . '/assets/js/prism.js');
- 
-    wp_enqueue_style("add_prism_css",  get_template_directory_uri() . "/assets/css/prism.css");
+	 wp_enqueue_style("add_nunito_font",  								'https://fonts.googleapis.com/css?family=Nunito', false);   
 
+	 wp_enqueue_script('add_prism_js', 		get_template_directory_uri() 	. '/assets/js/prism.js');
+	
+	 wp_enqueue_style("add_prism_css",  	get_template_directory_uri() 	. "/assets/css/prism.css");
 
-    wp_enqueue_style("frontpage-custom",  get_template_directory_uri() . "/assets/css/frontpage.css");
+     wp_enqueue_style("frontpage-custom",  	get_template_directory_uri() . "/assets/css/frontpage.css");
 
-    wp_enqueue_style("weeklypowerup-style", get_stylesheet_uri());
+	 wp_enqueue_script('add_webflow_js', 	get_template_directory_uri() 	. '/assets/js/webflow.js', array( 'jquery' ));
+  
+     wp_enqueue_style("weeklypowerup-style", get_stylesheet_uri());
     
     
 }
@@ -101,12 +104,11 @@ function weeklypowerup_setup(){
 }
 add_action( 'after_setup_theme', 'weeklypowerup_setup' );
 
-	/**
-	 *
-	 Hide Admin Bar From Everyone But Admins
-	 *
-	 *
-	 */
-	if (!current_user_can('manage_options')){
-	    add_filter('show_admin_bar', '__return_false');
-	}
+/**
+ *Hide Admin Bar From Everyone But Admins
+	*
+	*
+	*/
+if (!current_user_can('manage_options')){
+	add_filter('show_admin_bar', '__return_false');
+}

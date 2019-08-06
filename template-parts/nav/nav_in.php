@@ -19,7 +19,7 @@
   );
   
   $find = array('><a', '<li');
-  $replace = array('', '<a class="nav-link"');
+  $replace = array('', '<a class="wkp-nav-link w-nav-link"');
   
   echo str_replace($find, $replace, wp_nav_menu( $defaults ));
 ?>   
